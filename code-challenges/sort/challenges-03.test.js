@@ -6,9 +6,8 @@ CHALLENGE 1
 Write a function named sortBackwards that takes in an array of numbers and returns the same array, with the numbers sorted, highest to smallest.
 ------------------------------------------------------------------------------------------------ */
 
-const sortBackwards = (arr) => {
-  // Solution code here...
-};
+const sortBackwards = (arr) => arr.sort((a, b) => (b - a));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -21,7 +20,16 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  arr.sort((a, b) => {
+    if (a > b) {
+      return 1;
+    }
+    if (b > a) {
+      return -1
+    }
+    return 0;
+  })
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +40,8 @@ Write a function named sortByLength that takes in an array of strings and return
 
 const sortByLength = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => a.length - b.length);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +54,18 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => {
+    let nameA = a.toUpperCase();
+    let nameB = b.toUpperCase();
+    if (nameA > nameB) {
+      return 1;
+    }
+    if (nameA < nameB) {
+      return -1;
+    }
+    return 0;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,8 +82,9 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
-};
+  arr.sort((a,b) => a.price - b.price);
+  return arr;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -73,6 +96,8 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => a.toString().length - b.toString().length);
+  return arr;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -95,6 +120,18 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => {
+    let nameA = a.lastName.toUpperCase();
+    let nameB = b.lastName.toUpperCase();
+    if (nameA > nameB) {
+      return 1;
+    }
+    if (nameA < nameB) {
+      return -1;
+    } 
+    return 0;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,7 +146,29 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => {
+    // if (a.lastName > b.lastName) {
+    //   return 1;
+    // } else if (a.lastName < b.lastName) {
+    //   return -1
+    // } else if (a.firstName > b.firstName) {
+    //   return 1;
+    // } else if (a.firstName < b.firstName) {
+    //   return -1;
+    // } else {
+    //   return a.age - b.age;
+    // }
+    return a.lastName > b.lastName ? 1
+    : a.lastName < b.lastName ? -1
+    : a.firstName > b.firstName ? 1
+    : a.firstName < b.firstName ? -1
+    : a.age - b.age;
+
+  });
+  return arr;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -135,6 +194,21 @@ const meetings = [
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => {
+    let aDay = (a.dayOfWeek === 'Monday') ? 1
+      : (a.dayOfWeek === 'Tuesday') ? 2
+      : (a.dayOfWeek === 'Wednesday') ? 3
+      : (a.dayOfWeek === 'Thursday') ? 4
+      : 5;
+    let bDay = (b.dayOfWeek === 'Monday') ? 1
+      : (b.dayOfWeek === 'Tuesday') ? 2
+      : (b.dayOfWeek === 'Wednesday') ? 3
+      : (b.dayOfWeek === 'Thursday') ? 4
+      : 5;
+    return aDay - bDay;
+
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,6 +223,28 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  // arr.sort((a, b) => {
+  //   let aDay = (a.dayOfWeek === 'Monday') ? 1
+  //     : (a.dayOfWeek === 'Tuesday') ? 2
+  //     : (a.dayOfWeek === 'Wednesday') ? 3
+  //     : (a.dayOfWeek === 'Thursday') ? 4
+  //     : 5;
+  //   let bDay = (b.dayOfWeek === 'Monday') ? 1
+  //     : (b.dayOfWeek === 'Tuesday') ? 2
+  //     : (b.dayOfWeek === 'Wednesday') ? 3
+  //     : (b.dayOfWeek === 'Thursday') ? 4
+  //     : 5;
+  //   return aDay - bDay;
+
+  // });
+  arr.sort((a,b) => {
+    if (a.start === b.start && a.dayOfWeek === b.dayOfWeek) {
+      return (a.end-a.start) - (b.end-b.start);
+    } else {
+      return a.start - b.start;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
