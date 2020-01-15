@@ -239,9 +239,10 @@ const extractVowels = (str) => {
     }
   });
   
-  vowels.sort().forEach(letter => {
-    returnArr[1] += letter;
-  })
+  returnArr[1] = vowels.sort().join('');
+  // vowels.sort().forEach(letter => {
+  //   returnArr[1] += letter;
+  // })
   
   return returnArr;
 };
