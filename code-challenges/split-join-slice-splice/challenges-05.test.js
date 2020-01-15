@@ -15,7 +15,12 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
+  let length = str.length;
   // Solution code here...
+  for (let i = 0; i < length + 1; i++) {
+    result.push(str);
+    str = str.slice(1);
+  }
   return result;
 };
 
@@ -27,9 +32,7 @@ Write a function name wordsToCharList that, given a string as input, returns a n
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
-  // Solution code here...
-};
+const wordsToCharList = (arr) => arr.split('');
 
 
 /* ------------------------------------------------------------------------------------------------
