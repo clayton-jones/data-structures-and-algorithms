@@ -32,15 +32,7 @@ Write a function named notInFirstArray that, given two arrays as input, uses fil
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
-const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
-  let forbidden = '';
-  forbiddenValues.forEach(elem => forbidden += elem.toString());
-  let regex = 
-  return arr.filter(elem => {
-
-  });
-};
+const notInFirstArray = (forbiddenValues, arr) => arr.filter(elem => !forbiddenValues.includes(elem) ? true : false);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -81,9 +73,7 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  // Solution code here...
-};
+const getBaseStatGreaterThan = (arr, minBaseStat) => arr.filter(obj => obj.baseStat > minBaseStat);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -94,8 +84,15 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
+let statArr = [];
+arr.filter(obj => {
+   if (obj.baseStat > minBaseStat) {
+     statArr.push(obj.stat.name);
+   }
+ });
+ return statArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -148,6 +145,9 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+  return arr.filter(obj => {
+    return !obj.children;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,9 +158,13 @@ Write a function named evenOddNumericValues that, given an array as input, uses 
 For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 'odd'].
 ------------------------------------------------------------------------------------------------ */
 
-const evenOddNumericValues = (arr) => {
-  // Solution code here...
-};
+const evenOddNumericValues = (arr) => arr.filter(elem => typeof(elem)==='number').map(num=> num%2===0?'even':'odd');
+
+  // return arr.filter(elem => {
+  //   return typeof(elem) === 'number';
+  // }).map(num => {
+  //   return num % 2 === 0 ? 'even' : 'odd';
+  // });
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
