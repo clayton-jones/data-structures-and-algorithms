@@ -151,13 +151,12 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
-  let num = 0;
-  arr.reduce((accum, obj) => {
+  return arr.reduce((accum, obj) => {
     if (obj.children) {
-      num += obj.children.length;
+      return accum += obj.children.length;
     }
-  }, num);
-  return num;
+    return accum;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -170,11 +169,10 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
-  let avg = {count: 0, sum: 0};
-  arr.reduce((accum, num) => {
-    avg.count++;
-    avg.sum += num;
-  }, avg);
+  let avg = arr.reduce((accum, cur) => {
+    return {count: ++accum.count, 
+            sum: accum.sum += cur};
+  }, {count: 0, sum: 0});
   return avg.sum / avg.count;
 };
 
@@ -197,13 +195,12 @@ const isPrime = (value) => {
 
 const countPrimeNumbers = (arr) => {
   // Solution code here...
-  let count = 0;
-  arr.reduce((accum, num) => {
+  return arr.reduce((accum, num) => {
     if (isPrime(num)) {
-      count++;
+      return ++accum;;
     }
-  }, count);
-  return count;
+    return accum;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -247,12 +244,12 @@ const snorlaxData = {
 
 const extractStat = (statName, arr) => {
   // Solution code here...
-  let stat = {};
-  arr.reduce((accum, obj) => {
+  let stat = arr.reduce((accum, obj) => {
     if (obj.stat.name === statName) {
-      stat = obj;
+      return accum = obj;
     }
-  }, stat);
+    return accum;
+  }, {});
 
   if (stat) {
     return stat;
