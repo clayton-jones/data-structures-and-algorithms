@@ -126,6 +126,11 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  return data.filter(obj => {
+    return obj.gender === 'male' || obj.gender === 'female';
+  }).map(obj => {
+    return obj.name;
+  }).join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -136,6 +141,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
+  return data.reduce((acc, cur) => {
+    return parseInt(acc.height) < parseInt(cur.height) ? acc : cur;
+  }).name;
 };
 
 /* ------------------------------------------------------------------------------------------------
