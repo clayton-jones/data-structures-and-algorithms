@@ -89,6 +89,9 @@ Write a function named findEvery that takes in an array of strings, along with a
 
 const findEvery = (arr, target) => {
   // Solution code here...
+  let word = target.replace(/\)/gm, '\\)');
+  let regex = new RegExp(word, 'm');
+  return arr.every(str => regex.test(str));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -105,6 +108,11 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 
 const unenrollBrook = (arr) => {
   // Solution code here...
+  return arr.map(array => {
+    return array.filter(str => {
+      return !/^.*Brook.*$/gm.test(str);
+    });
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,6 +140,12 @@ const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sat
 
 const sortByDay = (arr) => {
   // Solution code here...
+  return daysOfWeek.map(day => {
+    let regex = new RegExp(day, 'm');
+    return arr.filter(event => {
+      return regex.test(event);
+    });
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -142,9 +156,7 @@ Write a function named characterByIndex that takes in an array of strings and re
 For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
-const characterByIndex = (arr) => {
-  // Solution code here...
-};
+const characterByIndex = (arr) => arr.map((str, i) => str.charAt(i));
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
