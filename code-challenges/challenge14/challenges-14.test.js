@@ -121,6 +121,14 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
+  return arr.sort((a, b) => {
+    if (a[property] < b[property]) {
+      return -1;
+    } else if (a[property] > b[property]) {
+      return 1;
+    }
+    return 0;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,6 +145,7 @@ https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
 // Solution code here...
+  return /^https:\/\/.+$/gm.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
