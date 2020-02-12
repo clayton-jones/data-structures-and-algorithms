@@ -166,9 +166,23 @@ Here is a sample board:
   ['X', 'O', 'X'],
 ];
 ------------------------------------------------------------------------------------------------ */
-
+const helpCheck = (row1, col1, row2, col2, row3, col3, board) => {
+  const value = board[row1][col1];
+  if (value === '') {
+    return false;
+  }
+  return (board[row2][col2] === value && board[row3][col3] === value);
+}
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  return helpCheck(0, 0, 1, 0, 2, 0, board) ||
+  helpCheck(0, 0, 0, 1, 0, 2, board) ||
+  helpCheck(0, 0, 1, 1, 2, 2, board) ||
+  helpCheck(1, 0, 1, 1, 1, 2, board) ||
+  helpCheck(2, 0, 2, 1, 2, 1, board) ||
+  helpCheck(2, 0, 1, 1, 0, 2, board) ||
+  helpCheck(0, 1, 1, 1, 2, 1, board) ||
+  helpCheck(0, 2, 1, 2, 2, 2, board);
 };
 
 /* ------------------------------------------------------------------------------------------------
