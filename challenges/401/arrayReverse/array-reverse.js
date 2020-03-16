@@ -1,6 +1,6 @@
 'use strict';
 
-
+// returns length of an array
 function arrLength(arr) {
   let length = 0;
   while (arr[length]) {
@@ -9,6 +9,7 @@ function arrLength(arr) {
   return length;
 }
 
+// reverses input array and returns new array
 function reverseArray(arr) {
   let length = arrLength(arr);
   let newArr = new Array(length);
