@@ -7,4 +7,4 @@ Write a function called insertShiftArray which takes in an array and the value t
 Like the challenge before, I knew I'd need a seperate function to find the array length. Then I would need to take that length to create a new Array and loop over the input array, adding values to the new Array and adding the new value when the middle index is reached.
 
 ## Solution
-![Whiteboard](./assets/insertShiftArray.png)
+![Whiteboard](./assets/insertShiftArray.jpg)
