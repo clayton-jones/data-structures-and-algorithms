@@ -7,7 +7,7 @@ function arrayBinarySearch(arr, target) {
     return -1;
   }
 
-  let midIndex = Math.floor((arr.length) / 2);
+  let midIndex = Math.floor(arr.length / 2);
 
   // while the target is not at the current middle index...
   while (arr[midIndex] !== target) {
