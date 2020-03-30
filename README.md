@@ -15,4 +15,4 @@
 
 ### Data Structures  
 
-- [Linked Lists]()  
+- [Linked Lists](https://github.com/clayton-jones/data-structures-and-algorithms/blob/linked-list/data-structures/linkedList/)  
