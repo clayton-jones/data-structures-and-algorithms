@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
     "test": "jest --coverage --verbose",
     "watch": "jest --watchAll"
   },
@@ -11,6 +13,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "jest": "^24.1.0"
+    "jest": "^24.9.0"
   }
 }
