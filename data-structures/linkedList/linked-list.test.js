@@ -62,3 +62,77 @@ describe('testing Node creation', () => {
     expect(newNode.next).toBeFalsy();
   });
 });
+
+describe('testing LinkedList append method', () => {
+  it('can successfully add a node to the end of the list', () => {
+    let LL = new testLL.LinkedList();
+
+    LL.insert(1);
+    LL.insert(2);
+    LL.insert(3);
+
+    LL.append(0);
+
+    expect(LL.toString()).toBe('{3} => {2} => {1} => {0} => null');
+  });
+
+  it('can successfully add multiple nodes to the end of the list', () => {
+    let LL = new testLL.LinkedList();
+
+    LL.insert(1);
+    LL.append(2);
+    LL.append(3);
+
+    expect(LL.toString()).toBe('{1} => {2} => {3} => null');
+  });
+});
+
+describe('testing LinkedList insertBefore method', () => {
+  it('can successfully insert a node before another node located in the middle of the list', () => {
+    let LL = new testLL.LinkedList();
+
+    LL.insert('A');
+    LL.insert('B');
+    LL.insert('C');
+
+    LL.insertBefore('B', 'Before B');
+
+    expect(LL.toString()).toBe('{C} => {Before B} => {B} => {A} => null');
+  });
+
+  it('can successfully insert a node before the first node of a linked list', () => {
+    let LL = new testLL.LinkedList();
+
+    LL.insert('A');
+
+    LL.insertBefore('A', 'Before A');
+    expect(LL.toString()).toBe('{Before A} => {A} => null');
+  });
+});
+
+describe('testing LinkedList insertAfter method', () => {
+  it('can successfully insert a node after one that is in the middle of the list', () => {
+    let LL = new testLL.LinkedList();
+
+    LL.insert('A');
+    LL.insert('B');
+    LL.insert('C');
+
+    LL.insertAfter('B', 'After B');
+
+    expect(LL.head.next.next.val).toBe('After B');
+  });
+
+  it('can successfully insert a node after the last node of the list', () => {
+    let LL = new testLL.LinkedList();
+
+    LL.insert('A');
+    LL.insert('B');
+
+    LL.insertAfter('A', 'After A');
+
+    expect(LL.head.next.next.val).toBe('After A');
+
+  });
+});
+

@@ -77,6 +77,10 @@ class LinkedList {
 
   append(value) {
     let currentNode = this.head;
+    
+    if (!currentNode) {
+      this.insert(value);
+    }
 
     // loops until currentNode.next doesn't exist
     // meaning we've reached the end of the list
@@ -91,10 +95,10 @@ class LinkedList {
 
   insertBefore(listValue, newValue) {
     let currentNode = this.head;
+    let newNode = new Node(newValue);
 
     // if the value being search for is the first node in the list
     if (currentNode.val === listValue) {
-      let newNode = new Node(newValue);
       newNode.next = currentNode;
       this.head = newNode;
   
@@ -114,7 +118,6 @@ class LinkedList {
       }
     }
     
-    let newNode = new Node(newValue);
     newNode.next = currentNode.next;
     currentNode.next = newNode;
 
