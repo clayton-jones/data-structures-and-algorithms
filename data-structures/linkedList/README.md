@@ -2,7 +2,7 @@
 A Linked List is a data structure comprised of objects linked to one another via "pointer" properties, typically `next` and/or `previous`.
     
 ## Links
-[Pull Request]()
+[Pull Request](https://github.com/clayton-jones/data-structures-and-algorithms/pull/31)
   
 [Actions](https://github.com/clayton-jones/data-structures-and-algorithms/actions)
 
