@@ -80,6 +80,7 @@ class LinkedList {
     
     if (!currentNode) {
       this.insert(value);
+      return;
     }
 
     // loops until currentNode.next doesn't exist
@@ -106,61 +107,43 @@ class LinkedList {
     }
 
     // otherwise:
-  
-    // loops until the value of the node after the current is the listValue
-    // being searched for, if we get to a null next node, the value doesn't exist
-    while (currentNode.next.val !== listValue) {
-      currentNode = currentNode.next;
-
-      if (!currentNode.next) {
-        console.error('ERROR! No Node with given value found in list.');
-        return false;
-      }
-    }
+    // loop while currentNode.next exists
+    while (currentNode.next) {
+      if(currentNode.next.val === listValue) {
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
     
-    newNode.next = currentNode.next;
-    currentNode.next = newNode;
+        return newNode;
+      }
 
-    return newNode;
+      currentNode = currentNode.next;
+    }
+
+    console.error('ERROR! No Node with given value found in list.');
+    return false;
+
+    
   }
 
   insertAfter(listValue, newValue) {
     let currentNode = this.head;
 
-    while (currentNode && currentNode.val !== listValue) {
+    while (currentNode) {
+      if(currentNode.val === listValue) {
+        let newNode = new Node(newValue);
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        return newNode;
+      }
+
       currentNode = currentNode.next;
     }
 
-    if (!currentNode) {
-      console.error('ERROR! No Node with given value found in list.');
-      return false;
-    }
-
-    let newNode = new Node(newValue);
-    newNode.next = currentNode.next;
-    currentNode.next = newNode;
-
-    return newNode;
+    console.error('ERROR! No Node with given value found in list.');
+    return false;
   }
 }
 
-let newLL = new LinkedList();
-
-newLL.insert('A');
-
-newLL.toString();
-
-newLL.append('B');
-
-newLL.toString();
-
-newLL.append('C');
-
-newLL.toString();
-
-newLL.insertBefore('A', 'Before A');
-
-newLL.toString();
 
 module.exports = { LinkedList, Node };
 
