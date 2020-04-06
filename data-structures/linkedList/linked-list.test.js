@@ -136,3 +136,56 @@ describe('testing LinkedList insertAfter method', () => {
   });
 });
 
+describe('testing kthFromEnd method', () => {
+  it('returns false when k is greater than the length of the list', () => {
+    let LL = new testLL.LinkedList();
+    LL.insert(1);
+    LL.append(2);
+    LL.append(3);
+    LL.append(4);
+    expect(LL.kthFromEnd(5)).toBe(false);
+  });
+
+  it('returns false when k is the same as the length of the list', () => {
+    let LL = new testLL.LinkedList();
+    LL.insert(1);
+    LL.append(2);
+    LL.append(3);
+    LL.append(4);
+
+    expect(LL.kthFromEnd(4)).toBe(false);
+  });
+
+  it('returns false if k is not a positive integer', () => {
+    let LL = new testLL.LinkedList();
+    LL.insert(1);
+    LL.append(2);
+    LL.append(3);
+    LL.append(4);
+
+    expect(LL.kthFromEnd(-4)).toBe(false);
+  });
+
+  it('returns accordingly if linked list size it one', () => {
+    let LL = new testLL.LinkedList();
+    LL.insert(1);
+
+    expect(LL.kthFromEnd(0)).toBe(1);
+  });
+
+  it('returns proper value at k = middle of list', () => {
+    let LL = new testLL.LinkedList();
+    LL.insert(1);
+    LL.append(2);
+    LL.append(3);
+    LL.append(4);
+    LL.append(4);
+
+    expect(LL.kthFromEnd(2)).toBe(3);
+  });
+  
+});
+
+/*
+“Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+*/
