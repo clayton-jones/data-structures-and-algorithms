@@ -19,6 +19,7 @@ Big-O:
 - `append`: O(n)
 - `insertBefore`: O(n)
 - `insertAfter`: O(n)
+- `kthFromEnd`: O(n)
   
 ## API
 - `insert(value)`
@@ -33,6 +34,12 @@ Big-O:
   - searches for a value in the linked list and inserts a given value before it. returns false and prints an error if search value is not found.
 - `insertAfter(search_value, insert_value)`
   - similar to `insertBefore` but adds the value after the value searched for. also returns false and prints an error if value is not found.
+- `kthFromEnd(k)`
+  - returns value at the k-th place from the end of the linked list
   
 ## Testing
 `npm test`
+
+## Whiteboard for `kthFromEnd` challenge
+
+![kthFromEnd LinkedList method](./assets/ll-kth-from-end.png)

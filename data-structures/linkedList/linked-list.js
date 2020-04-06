@@ -97,6 +97,7 @@ class LinkedList {
   insertBefore(listValue, newValue) {
     let currentNode = this.head;
     let newNode = new Node(newValue);
+    
 
     // if the value being search for is the first node in the list
     if (currentNode.val === listValue) {
@@ -112,7 +113,6 @@ class LinkedList {
       if(currentNode.next.val === listValue) {
         newNode.next = currentNode.next;
         currentNode.next = newNode;
-    
         return newNode;
       }
 
@@ -133,6 +133,7 @@ class LinkedList {
         let newNode = new Node(newValue);
         newNode.next = currentNode.next;
         currentNode.next = newNode;
+
         return newNode;
       }
 
@@ -141,6 +142,22 @@ class LinkedList {
 
     console.error('ERROR! No Node with given value found in list.');
     return false;
+  }
+
+  kthFromEnd(k) {
+    if(k < 0) return false;
+    
+    let currentNode = this.head;
+    let arr = [];
+    
+    while(currentNode) {
+      arr.push(currentNode.val);
+      currentNode = currentNode.next;
+    }
+
+    if(k >= arr.length) return false;
+
+    return arr[arr.length - 1 - k];
   }
 }
 
