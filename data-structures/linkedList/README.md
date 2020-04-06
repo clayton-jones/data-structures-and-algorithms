@@ -42,4 +42,4 @@ Big-O:
 
 ## Whiteboard for `kthFromEnd` challenge
 
-![kthFromEnd LinkedList method](./assets/kth-from-end.png)
+![kthFromEnd LinkedList method](./assets/ll-kth-from-end.png)
