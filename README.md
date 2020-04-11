@@ -12,6 +12,8 @@
 
 - [Array Binary Search](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/arrayBinarySearch)
 
+- [Merge Lists](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/llMerge)
+
 
 ### Data Structures  
 
