@@ -26,7 +26,6 @@ function mergeLists(list1, list2) {
     nodeTwo = nodeTwo.next;
   }
 
-  newLL.toString();
   return newLL.head;
 };
 
