@@ -16,6 +16,7 @@
 
 - [Fifo Animal Shelter](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/fifoAnimalShelter)
 
+- [Multi Bracket Validation](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/multiBracketValidation)
 
 ### Data Structures  
 
