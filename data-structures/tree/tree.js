@@ -13,53 +13,81 @@ class BinaryTree {
     this.root = null;
   }
 
-  add(val) {
-    if(!this.root) {
+  add(val, root = this.root) {
+    if (!root) {
       let newNode = new Node(val);
       this.root = newNode;
-    } else {
-      this.insertNode(val, this.root);
+      return;
     }
-  }
 
-  insertNode(val, root) {
-    let newNode = new Node(val);
-    
+    if (root.left && root.right) {
+      if (root.left.left && root.left.right) {
+        this.add(val, root.right);
+      } else {
+        this.add(val, root.left);
+      }
+    }
+
     if (!root.left) {
       root.left = newNode;
       return;
     }
-    
-    if(!root.right) {
+
+    if (!root.right) {
       root.right = newNode;
       return;
     }
-    
+
+
+    return;
   }
 
-  preOrder() {
-    return this.pre(this.root, []);
-  }
-
-  pre(root, array) {
+  preOrder(root = this.root, array = []) {
     array.push(root.val);
 
     if(root.left) {
-      array.concat(pre(root.left, array));
+      array.concat(preOrder(root.left, array));
     }
 
     if(root.right) {
-      array.concat(pre(root.right, array));
+      array.concat(preOrder(root.right, array));
     }
 
     console.log('Array:', array);
     return array;
   }
 
+
   inOrder(root, array) {
+    
+    if(root.left) {
+      array.concat(inOrder(root.left, array));
+    }
+
+    array.push(root.val);
+
+    if(root.right) {
+      array.concat(inOrder(root.right, array));
+    }
+
+    console.log('Array:', array);
+    return array;
   }
 
   postOrder(root, array) {
+    if(root.left) {
+      array.concat(postOrder(root.left, array));
+    }
+    
+    if(root.right) {
+      array.concat(postOrder(root.right, array));
+    }
+    
+    array.push(root.val);
+
+    console.log('Array:', array);
+    return array;
+
   }
 }
 
@@ -74,48 +102,39 @@ class BinarySearchTree extends BinaryTree {
     super();
   }
 
-  add(val) {
+  add(val, root = this.root) {
     try {
       if(typeof val !== 'number') throw Error('Added value must be a number');
   
+      let newNode = new Node(val);
+
       if (!this.root) {
-        let newNode = new Node(val);
         this.root = newNode;
       } else {
-        this.insertNode(val, this.root);
+        if (val < root.val) {
+          if (!root.left) {
+            root.left = newNode;
+          } else {
+            this.add(val, root.left);
+          }
+        }
+
+        if(val > root.val) {
+          if(!root.right) {
+            root.right = newNode;
+          } else {
+            this.add(val, root.right);
+          }
+        }
       }
+
     } catch(e) {
       console.log(e);
       return 'Value added must be a number';
     }
   }
 
-  insertNode(val, root) {
-    let newNode = new Node(val);
-
-    if (val < root.val) {
-      if (!root.left) {
-        root.left = newNode;
-      } else {
-        this.insertNode(val, root.left);
-      }
-    }
-
-    if(val > root.val) {
-      if(!root.right) {
-        root.right = newNode;
-      } else {
-        this.insertNode(val, root.right);
-      }
-    }
-  }
-
-  contains(val) {
-    return this.includes(val, this.root);
-  }
-
-  includes(val, root) {
-
+  contains(val, root = this.root) {
     if(!root) return false;
 
     if(val === root.val) {
@@ -123,11 +142,11 @@ class BinarySearchTree extends BinaryTree {
     }
 
     if (val < root.val) {
-      return this.includes(val, root.left);
+      return this.contains(val, root.left);
     }
 
     if(val > root.val) {
-      return this.includes(val, root.right);
+      return this.contains(val, root.right);
     }
   }
 }
