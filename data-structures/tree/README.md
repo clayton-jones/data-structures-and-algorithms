@@ -4,20 +4,32 @@ Trees are similar to linked lists, but have branched nodes instead of a single l
     
 ## Links
     
-[GitHub PR]()
+[GitHub PR](https://github.com/clayton-jones/data-structures-and-algorithms/pull/38)
+[GitHub Actions](https://github.com/clayton-jones/data-structures-and-algorithms/actions)
     
 ## Challenge
     
-<!-- Description of the challenge -->
+This application will be the implementation of a BinaryTree and BinarySearchTree class, and any important methods related to that.
     
 ## Approach & Efficiency
     
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Big O:
+`preOrder`: O(n)
+`inOrder`: O(n)
+`postOrder`: O(n)
+
+`add`: O(n)
+`contains`: O(n)
     
 ## API
     
-<!-- Description of each method publicly available to your Tree classes -->
+`preOrder` - returns an array of values in the order of left >> right >> root
+`inOrder` - returns an array of values in the order of left >> root >> right
+`postOrder` - returns an array of values in the order of left >> right >> root
+
+`add` - adds a number to the tree in a sorted manner, left or right or each root if it is smaller or larger, respectively
+`contains` - searches tree for value, returns a boolean
     
 ## Testing
     
-<!-- Description of how to run your tests -->
+`npm test tree.test.js`
