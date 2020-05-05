@@ -22,4 +22,6 @@
 
 - [Linked Lists](https://github.com/clayton-jones/data-structures-and-algorithms/blob/linked-list/data-structures/linkedList/)  
 
-- [Stacks and Queues](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/stacksAndQueues)
+- [Stacks and Queues](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/stacksAndQueues)  
+
+- [Trees](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/tree)
