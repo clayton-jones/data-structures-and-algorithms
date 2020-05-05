@@ -43,14 +43,15 @@ class BinaryTree {
   }
 
   preOrder(root = this.root, array = []) {
+    console.log(root.val);
     array.push(root.val);
 
     if(root.left) {
-      array.concat(preOrder(root.left, array));
+      array.concat(this.preOrder(root.left, array));
     }
 
     if(root.right) {
-      array.concat(preOrder(root.right, array));
+      array.concat(this.preOrder(root.right, array));
     }
 
     console.log('Array:', array);
@@ -58,31 +59,33 @@ class BinaryTree {
   }
 
 
-  inOrder(root, array) {
+  inOrder(root = this.root, array = []) {
     
     if(root.left) {
-      array.concat(inOrder(root.left, array));
+      array.concat(this.inOrder(root.left, array));
     }
 
+    console.log(root.val);
     array.push(root.val);
 
     if(root.right) {
-      array.concat(inOrder(root.right, array));
+      array.concat(this.inOrder(root.right, array));
     }
 
     console.log('Array:', array);
     return array;
   }
 
-  postOrder(root, array) {
+  postOrder(root = this.root, array = []) {
     if(root.left) {
-      array.concat(postOrder(root.left, array));
+      array.concat(this.postOrder(root.left, array));
     }
     
     if(root.right) {
-      array.concat(postOrder(root.right, array));
+      array.concat(this.postOrder(root.right, array));
     }
     
+    console.log(root.val);
     array.push(root.val);
 
     console.log('Array:', array);
