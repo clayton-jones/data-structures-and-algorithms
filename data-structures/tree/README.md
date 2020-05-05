@@ -1,10 +1,10 @@
 # Tree Implementation
     
-<!-- Short summary or background information -->
+Trees are similar to linked lists, but have branched nodes instead of a single line of nodes.
     
 ## Links
     
-<!-- Link to pull request, passing tests, etc -->
+[GitHub PR]()
     
 ## Challenge
     
