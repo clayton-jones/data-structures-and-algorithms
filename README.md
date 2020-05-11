@@ -20,6 +20,8 @@
 
 - [Fizz Buzz Tree](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/fizzBuzzTree)
 
+- [Breadth First Traversal](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/breadthFirst)
+
 ### Data Structures  
 
 - [Linked Lists](https://github.com/clayton-jones/data-structures-and-algorithms/blob/linked-list/data-structures/linkedList/)  
