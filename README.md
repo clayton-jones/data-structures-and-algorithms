@@ -20,7 +20,9 @@
 
 - [Fizz Buzz Tree](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/fizzBuzzTree)
 
-- [Breadth First Traversal](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/breadthFirst)
+- [Breadth First Traversal](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/breadthFirst)  
+  
+- [Find Maximum Value in a Tree](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/findMaximumValueTree)  
 
 ### Data Structures  
 
