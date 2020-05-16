@@ -143,23 +143,25 @@ class BinaryTree {
 
     if (root.left) {
       leftMax = this.findMaximumValue(root.left, maxVal);
+      if (leftMax > maxVal) maxVal = leftMax;
     }
 
     if (root.right) {
       rightMax = this.findMaximumValue(root.right, maxVal);
-    }
-
-    if (rightMax && leftMax) {
-      if (leftMax === rightMax && leftMax > maxVal) maxVal = leftMax;
-
-      if (rightMax > maxVal && rightMax > leftMax) maxVal = rightMax;
-      
-      if (leftMax > maxVal && leftMax > rightMax) maxVal = leftMax;
-    } else if (leftMax) {
-      if (leftMax > maxVal) maxVal = leftMax;
-    } else if (rightMax) {
       if (rightMax > maxVal) maxVal = rightMax;
     }
+
+    // if (rightMax && leftMax) {
+    //   if (leftMax === rightMax && leftMax > maxVal) maxVal = leftMax;
+
+    //   if (rightMax > maxVal && rightMax > leftMax) maxVal = rightMax;
+      
+    //   if (leftMax > maxVal && leftMax > rightMax) maxVal = leftMax;
+    // } else if (leftMax) {
+    //   if (leftMax > maxVal) maxVal = leftMax;
+    // } else if (rightMax) {
+    //   if (rightMax > maxVal) maxVal = rightMax;
+    // }
 
     return maxVal;
   }
