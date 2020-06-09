@@ -24,6 +24,8 @@
   
 - [Find Maximum Value in a Tree](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/findMaximumValueTree)  
 
+- [Insertion Sort](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/insertionSort)
+
 ### Data Structures  
 
 - [Linked Lists](https://github.com/clayton-jones/data-structures-and-algorithms/blob/linked-list/data-structures/linkedList/)  
