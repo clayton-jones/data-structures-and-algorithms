@@ -6,7 +6,7 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 Once you are done with your article, code a working, tested implementation of Insertion Sort based on the pseudocode provided.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+The psuedo code was provided. The efficiency for insertion sort is N^2
 
 ## Solution
-<!-- Embedded whiteboard image -->
+Whiteboard can be found on [BLOG](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/insertionSort/BLOG)
