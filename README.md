@@ -27,6 +27,8 @@
 - [Insertion Sort](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/insertionSort)  
 
 - [Merge Sort](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/mergeSort)  
+  
+- [Quick Sort](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/quickSort)  
 
 ### Data Structures  
 
