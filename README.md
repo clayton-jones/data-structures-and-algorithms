@@ -36,4 +36,6 @@
 
 - [Stacks and Queues](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/stacksAndQueues)  
 
-- [Trees](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/tree)
+- [Trees](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/tree)  
+
+- [Hash Tables](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/hashtable)
