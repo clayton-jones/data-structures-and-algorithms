@@ -30,6 +30,8 @@
   
 - [Quick Sort](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/quickSort)  
 
+- [Repeated Word](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/repeatedWord)  
+  
 ### Data Structures  
 
 - [Linked Lists](https://github.com/clayton-jones/data-structures-and-algorithms/blob/linked-list/data-structures/linkedList/)  
