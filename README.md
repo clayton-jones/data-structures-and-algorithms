@@ -32,6 +32,8 @@
 
 - [Repeated Word](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/repeatedWord)  
   
+- [Tree Intersection](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/treeIntersection)  
+  
 ### Data Structures  
 
 - [Linked Lists](https://github.com/clayton-jones/data-structures-and-algorithms/blob/linked-list/data-structures/linkedList/)  
