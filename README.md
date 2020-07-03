@@ -34,6 +34,8 @@
   
 - [Tree Intersection](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/treeIntersection)  
   
+- [Left Join Hashtables](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/leftJoin)  
+  
 ### Data Structures  
 
 - [Linked Lists](https://github.com/clayton-jones/data-structures-and-algorithms/blob/linked-list/data-structures/linkedList/)  
