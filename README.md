@@ -44,4 +44,6 @@
 
 - [Trees](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/tree)  
 
-- [Hash Tables](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/hashtable)
+- [Hash Tables](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/hashtable)  
+  
+- [Graph](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/graph)  
