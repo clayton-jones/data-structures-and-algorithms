@@ -10,7 +10,7 @@ class Graph {
 
   addNode(val) {
     if (!this.adjacencyList[val]) {
-      this.adjacencyList[val] = { connections: {} };
+      this.adjacencyList[val] = { value: val, connections: {} };
       this.nodeCount++;
     }
   }
