@@ -36,6 +36,8 @@
   
 - [Left Join Hashtables](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/leftJoin)  
   
+- [Get Edge](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/challenges/401/getEdge)  
+  
 ### Data Structures  
 
 - [Linked Lists](https://github.com/clayton-jones/data-structures-and-algorithms/blob/linked-list/data-structures/linkedList/)  
