@@ -52,3 +52,5 @@
   
 - [Breadth First - Graph](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/breadthFirst)  
   
+- [Depth First - Graph](https://github.com/clayton-jones/data-structures-and-algorithms/tree/master/data-structures/depthFirst)  
+  
